@@ -6,8 +6,8 @@ export default function Home() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className={toggle?"bg-[#0f172a] h-screen flex justify-center":" bg-[#7592d4] h-screen flex justify-center"}>
-      <section className={toggle?"bg-[#1e293b] pt-[2rem] px-[2rem] mt-5 w-[59rem] max-h-[653px] rounded-[8px] shadow-[0px_0px_1px_white] border-[1px_solid_#334155] text-white":"bg-[#ecf1f8] pt-[2rem] px-[2rem] mt-5 w-[59rem] max-h-[653px] rounded-[8px] shadow-[0px_0px_1px_white] border-[1px_solid_#334155] text-black"}>
+    <div className={toggle?"bg-[#0f172a] h-full flex justify-center py-10":" bg-[#7592d4] h-full flex justify-center py-10"}>
+      <div className={toggle?"bg-[#1e293b] pt-[2rem] px-[2rem] mt-5 w-[59rem]  rounded-[8px] shadow-[0px_0px_1px_white] border-[1px_solid_#334155] text-white":"bg-[#ecf1f8] pt-[2rem] px-[2rem] mt-5 w-[59rem]  rounded-[8px] shadow-[0px_0px_1px_white] border-[1px_solid_#334155] text-black"}>
         <h2 className="text-[24px] text-[#a5b4fc] font-[700] mt-[32px]">API Pricing</h2>
         <p>Our API pricing is based on the model used and the number of tokens processed. Here's a breakdown of the costs:</p>
         <table className="w-[100%] mt-[1rem] rounded-[8px] overflow-hidden">
@@ -44,8 +44,8 @@ export default function Home() {
         <h3 className="text-[19px] text-[#a5b4fc] font-[700] mt-[32px]">Token Estimation</h3>
         <p>On average, 1 token is approximately 4 characters or 0.75 words. For precise pricing, we recommend using our token calculator tool.</p>
         <h3 className="text-[19px] text-[#a5b4fc] font-[700] mt-[32px]">Billing</h3>
-        <p>You will only be charged for the tokens used in generating the book. The API tracks token usage and bills accordingly. Detailed usage reports are available in your account dashboard.</p>
-      </section>
+        <p className="pb-5">You will only be charged for the tokens used in generating the book. The API tracks token usage and bills accordingly. Detailed usage reports are available in your account dashboard.</p>
+      </div>
       <div className="fixed bottom-10 right-10 hover:cursor-pointer" onClick={()=>toggle? setToggle(false):setToggle(true)}>
         {toggle ? <div className="bg-white p-3 rounded-[20px] border-2 border-black">LIGHT MODE</div> : <div className="bg-black text-white p-3 rounded-[20px] border-2 border-white">DARK MODE</div>}
       </div>
